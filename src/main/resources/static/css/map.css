@@ -1,1 +1,56 @@
-#vmap { width:100%;height:100%;left:0px;top:0px}
+#vmap { 
+    width:100%;
+    height:100%;
+    left:0px;
+    top:0px;
+}
+
+#mapmode {
+    position:absolute;
+    z-index: 10;
+    bottom: 50px;
+    left: 20px;
+    border-radius: 10px;
+}
+
+.menu-item {
+    position: absolute;
+    padding: 8px 12px;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    background-color: #0066b0;
+    border: 1px solid #0066b0;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+
+/* 하단 분석 토글 컨테이너 */
+#analysis-toggle {
+  position: absolute;
+  top: 70px;
+  left: 112px;
+  transform: translateX(-50%);
+  z-index: 11;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: none; /* 초기에는 숨김 */
+  gap: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* 하단 토글 버튼 공통 스타일 */
+#analysis-toggle button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0066b0;
+  color: white;
+  cursor: pointer;
+}

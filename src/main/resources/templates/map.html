@@ -2,16 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>🎉Hello WebGL from Spring Boot!</title>
+    <title>🎉 Hello WebGL from Spring Boot!</title>
      <link rel="stylesheet" th:href="@{/css/map.css}" />
     <script type="text/javascript" src="https://map.vworld.kr/js/webglMapInit.js.do?version=3.0&apiKey=883700C9-5695-3502-8298-0BD571F2EA86"></script>
 </head>
 <body>
     <div id="vmap"></div>
+    <div id="menu"></div>
     <select id="mapmode" onChange="mapController.setMode(this.value)">
         <option value='3d-map'>3d-map</option>
         <option value='2d-map'>2d-map</option>
     </select>
+    <div id="analysis_popup"></div>
+
 </body>
-    <script th:src="@{/js/map.js}"></script>
+    <script th:src="@{/js/map/map.js(v=${#dates.format(#dates.createNow(), 'yyyyMMdd')})}"></script>
+    <script th:src="@{/js/map/profileTerrain/profileTerrain.js(v=${#dates.format(#dates.createNow(), 'yyyyMMdd')})}"></script>
+    <script th:src="@{/js/map/map_menu.js(v=${#dates.format(#dates.createNow(), 'yyyyMMdd')})}"></script>
 </html>
