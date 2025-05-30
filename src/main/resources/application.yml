@@ -2,7 +2,11 @@ server:
   port: 8081
 
 spring:
-  thymeleaf:
-    prefix: classpath:/static/
-    suffix: .html
-    cache: false
+  application:
+    name: webgl
+
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true

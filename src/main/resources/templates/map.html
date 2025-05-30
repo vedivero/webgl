@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>🎉 Hello from WebGL Spring Boot!</title>
-
+    <title>🎉Hello WebGL from Spring Boot!</title>
+     <link rel="stylesheet" th:href="@{/css/map.css}" />
     <script type="text/javascript" src="https://map.vworld.kr/js/webglMapInit.js.do?version=3.0&apiKey=883700C9-5695-3502-8298-0BD571F2EA86"></script>
 </head>
 <body>
-    <div id="vmap" style="width:100%;height:100%;left:0px;top:0px"></div>
+    <div id="vmap"></div>
     <select id="mapmode" onChange="mapController.setMode(this.value)">
         <option value='3d-map'>3d-map</option>
         <option value='2d-map'>2d-map</option>
     </select>
 </body>
-<script src="/js/map.js"></script>
-
+    <script th:src="@{/js/map.js}"></script>
 </html>
